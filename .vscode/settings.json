@@ -5,6 +5,7 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/target": true
+        "**/target": true,
+        "**/Cargo.lock": true
     }
 }
