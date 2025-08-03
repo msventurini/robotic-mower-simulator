@@ -123,7 +123,7 @@ fn main() {
     // - Growth rate: 8mm per day (8.0 / 24.0 / 60.0 / 60.0 mm per second)
     let mut grassmap = GrassMap::new_from_image(
         //
-        "../Maps_PNG/IA01BT1009_Map.png",
+        "./Maps_PNG/IA01BT1009_Map.png",
         0.01, // 1cm cell size
         10,   // 10 ticks per second
         0.0,  //8.0 / 24.0 / 60.0 / 60.0, // 8mm growth per day
