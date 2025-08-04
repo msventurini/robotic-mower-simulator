@@ -6,3 +6,6 @@ pub use vector2::*;
 
 pub mod robot;
 pub use robot::*;
+
+pub mod simulation;
+pub use simulation::*;
