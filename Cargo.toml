@@ -3,7 +3,11 @@ resolver = "3"
 name = "robotic-mower-simulator"
 version = "0.1.0"
 edition = "2024"
-members = ["gui_app", "simulation_worker"]
+members = [ 
+    "crates/file_utils",
+    "crates/app", 
+    "crates/simulation_worker"
+, "crates/ui_components"]
 
 [workspace.dependencies]
 byteorder = "1.5.0"
@@ -12,9 +16,11 @@ image = "0.25.6"
 rand = "0.9.1"
 rayon = "1.10.0"
 zstd = "0.13.3"
-
-
 iced = "0.13.1"
+
+[workspace.package]
+publish = false
+edition = "2024"
 # [profile.release]
 # codegen-units = 1
 # lto = "fat"

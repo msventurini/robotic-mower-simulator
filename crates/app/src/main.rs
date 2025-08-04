@@ -15,7 +15,9 @@ use simulation_worker::{ simulation };
 use iced::Center;
 use iced::widget::{Column ,button, column, text};
 
-fn main() -> iced::Result {
+use iced::Result as AppResult;
+
+fn main() -> AppResult {
     iced::run("My App",Counter::update, Counter::view)
 }
 

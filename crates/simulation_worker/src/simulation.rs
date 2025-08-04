@@ -107,7 +107,7 @@ pub fn run(mut robot: Robot, runtime: i32, save_interval: i32) {
                     );
 
                     let filename = format!("{}.zst", save_time);
-                    match robot.grassmap.save_with_filename("./results/", &filename) {
+                    match robot.grassmap.save_with_filename("../../results/", &filename) {
                         Ok(()) => println!("Successfully saved {}", filename),
                         Err(e) => eprintln!("Failed to save {}: {}", filename, e),
                     }
@@ -132,7 +132,7 @@ pub fn run(mut robot: Robot, runtime: i32, save_interval: i32) {
             iter_time = Instant::now();
 
             let filename = format!("{}.zst", seconds);
-            match robot.grassmap.save_with_filename("./results/", &filename) {
+            match robot.grassmap.save_with_filename("../../results/", &filename) {
                 Ok(()) => println!("Successfully saved {}", filename),
                 Err(e) => eprintln!("Failed to save {}: {}", filename, e),
             }

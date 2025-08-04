@@ -1,5 +1,5 @@
 [package]
-name = "simulation_worker"
+name = "app"
 version = "0.1.0"
 edition = "2024"
 
@@ -11,6 +11,8 @@ rand.workspace = true
 rayon.workspace = true
 zstd.workspace = true
 
+simulation_worker = { path = "../simulation_worker" }
+iced.workspace = true
 [profile.release]
 codegen-units = 1
 lto = "fat"
