@@ -1,0 +1,19 @@
+[package]
+name = "simulation_worker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+byteorder.workspace = true
+flate2.workspace = true
+image.workspace = true
+rand.workspace = true
+rayon.workspace = true
+zstd.workspace = true
+
+file_utils ={ path = "../file_utils"}
+[profile.release]
+codegen-units = 1
+lto = "fat"
+panic = "abort"
+strip = "debuginfo"
