@@ -3,7 +3,7 @@ resolver = "3"
 name = "robotic-mower-simulator"
 version = "0.1.0"
 edition = "2024"
-members = ["gui_app"]
+members = ["gui_app", "simulation_worker"]
 
 [workspace.dependencies]
 byteorder = "1.5.0"
