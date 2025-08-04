@@ -2,11 +2,6 @@ use crate::{GrassMap, PathMode, Robot, RobotState, Vector2};
 
 use std::time::Instant;
 
-pub struct GrassMapSettings {
-    
-}
-
-
 pub fn start() {
     let mut grassmap = GrassMap::new_from_image(
         //
