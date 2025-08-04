@@ -2,6 +2,34 @@ use crate::{GrassMap, PathMode, Robot, RobotState, Vector2};
 
 use std::time::Instant;
 
+pub fn start() {
+    let mut grassmap = GrassMap::new_from_image(
+        //
+        "./Maps_PNG/IA01BT1009_Map.png",
+        0.01, // 1cm cell size
+        10,   // 10 ticks per second
+        0.0,  //8.0 / 24.0 / 60.0 / 60.0, // 8mm growth per day
+    );
+
+    // Create a new robot with the following parameters:
+    let robot = Robot::new(
+        &mut grassmap,
+        0.01,             // 1cm cell size
+        Vector2::ZERO,    // Starting position MUST be at (0,0)
+        Vector2::ZERO,    // Home position MUST be at (0,0)
+        0.5,              // Speed: 0.5 meters per second
+        0.14,             // Cutting radius: 14cm
+        30.0,             // Target cut height: 30mm
+        80.0 / 3600.0,    // Battery drain: 80% per 1 hours of movement
+        0.0,              // No battery drain from cutting (simplified model)
+        PathMode::Random, // Move in Random
+        2.0,              // Zigzag width: 2 meters
+    );
+    run(robot, 1 * 24 * 3600, 600);
+
+}
+
+
 /// Main simulation function that runs the robot for a specified duration
 ///
 /// # Parameters

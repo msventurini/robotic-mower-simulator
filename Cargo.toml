@@ -13,6 +13,8 @@ rand = "0.9.1"
 rayon = "1.10.0"
 zstd = "0.13.3"
 
+
+iced = "0.13.1"
 # [profile.release]
 # codegen-units = 1
 # lto = "fat"

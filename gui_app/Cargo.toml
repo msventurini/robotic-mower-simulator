@@ -12,7 +12,7 @@ rayon.workspace = true
 zstd.workspace = true
 
 simulation_worker = { path = "../simulation_worker" }
-
+iced.workspace = true
 [profile.release]
 codegen-units = 1
 lto = "fat"
