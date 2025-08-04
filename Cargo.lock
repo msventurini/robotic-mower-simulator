@@ -310,6 +310,7 @@ dependencies = [
  "image",
  "rand 0.9.2",
  "rayon",
+ "simulation_worker",
  "zstd",
 ]
 
@@ -853,6 +854,14 @@ dependencies = [
 [[package]]
 name = "simulation_worker"
 version = "0.1.0"
+dependencies = [
+ "byteorder",
+ "flate2",
+ "image",
+ "rand 0.9.2",
+ "rayon",
+ "zstd",
+]
 
 [[package]]
 name = "smallvec"
